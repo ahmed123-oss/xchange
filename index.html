@@ -1,48 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  XChange Pro</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="png" href="—Pngtree—money transfer logo money exchange_5277012.png">
-    <title>XChange Pro - تحويل العملات بسهولة</title>
-<meta name="description" content="حوّل العملات العالمية بسرعة وبدقة مع XChange Pro. أسعار صرف محدثة يوميًا!">
-<meta name="keywords" content="تحويل العملات, أسعار الصرف, دولار, يورو, XChange Pro">
-<meta name="author" content="Ahmed">
-<meta property="og:title" content="XChange Pro - تحويل العملات بسهولة">
-<meta property="og:description" content="حوّل العملات العالمية بسرعة وبدقة مع XChange Pro. أسعار صرف محدثة يوميًا!">
-<meta property="og:image" content="https://example.com/logo.png"> <!-- ضع رابط اللوجو هنا -->
-<meta property="og:url" content="https://xchangepro.com">
-<meta name="robots" content="index, follow">
-
-        <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "XChange Pro",
-      "url": "https://xchangepro.com",
-      "description": "حوّل العملات العالمية بسرعة وبدقة مع XChange Pro. أسعار صرف محدثة يوميًا!",
-      "publisher": {
-        "@type": "Organization",
-        "name": "XChange Pro"
-      }
-    }
-    </script>
-
+    <title>Dynamic Country Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://i.pinimg.com/736x/8e/b3/5b/8eb35b75ebaa1cb54531815ff9b31884.jpg">
 </head>
 <body>
     <div class="container">
-        <h1>XChange Pro</h1>
-        <div class="converter">
-            <input type="number" id="amount" placeholder="Enter the amount ">
-            <select id="fromCurrency"></select>
-            <span>⇆</span>
-            <select id="toCurrency"></select>
-            <button onclick="convertCurrency()">XChange </button>
-        </div>
-        <h2 id="result"> result</h2>
+        <h1 id="title">🌍 Country Information</h1>
+
+        <label for="languageSelect">🌐 Select Language:</label>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+        </select>
+
+        <input type="text" id="countryInput" placeholder="Enter a country name">
+        <button onclick="getCountryInfo()">Search</button>
+
+        <div id="result"></div>
     </div>
-    <script src="main.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
